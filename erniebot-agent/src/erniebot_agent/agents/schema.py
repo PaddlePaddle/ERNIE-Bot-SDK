@@ -93,6 +93,13 @@ class AgentStep(Generic[_IT, _RT]):
 
 
 @dataclass
+class RetrievalStep(AgentStep):
+    """A step taken by an agent."""
+
+    name: str
+
+
+@dataclass
 class AgentStepWithFiles(AgentStep[_IT, _RT]):
     """A step taken by an agent involving file input and output."""
 
